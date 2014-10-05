@@ -21,14 +21,15 @@ var CategoryView = Backbone.View.extend({
 
 var FoodItemView = Backbone.View.extend({
   initialize: function () {
-    console.log(this.collection);
+    console.log(this.collection.models[0].attributes);
     this.render();
+
   },
 
   template: _.template($('#food-template').text()),
 
   render: function() {
-    $('.food-item').append(this.template(this.model));
+    $('.food-container').append(this.template(this.model));
   }
 })
 
@@ -38,12 +39,8 @@ var menuCollection = new Menu();
 menuCollection.add(menu);
 
 _.each(menuCollection.models, function (i) {
-  // console.log(i.attributes);
-});
-
-_.each(menuCollection.models, function (i) {
-  var categoryView = new CategoryView({collection: menuCollection});
-  categoryView.render();
+  var foodItemView = new FoodItemView({collection: menuCollection});
+  foodItemView.render();
 })
 
 })

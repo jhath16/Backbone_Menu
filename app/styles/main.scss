@@ -11,8 +11,8 @@ body {
   padding:50px;
   width:90%;
   margin:0 auto;
-  height:600px;
   border:1px solid black;
+  @include clearfix;
 }
 
 .food-container {
@@ -38,7 +38,6 @@ body {
 .categories {
   @include span-columns (3);
   @include shift(1);
-  height:500px;
   border:1px solid green;
   text-align:center;
   padding:10px;
