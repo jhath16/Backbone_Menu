@@ -11,23 +11,24 @@ var Menu = Backbone.Collection.extend({
 
 var CategoryView = Backbone.View.extend({
   initialize: function (options) {
-    
+
   },
 
   render: function(){
-    $('.food-container').append(this.title);
+    // $('.food-container').append(this.title);
   }
 })
 
 var FoodItemView = Backbone.View.extend({
   initialize: function () {
     console.log(this.collection);
+    this.render();
   },
 
   template: _.template($('#food-template').text()),
 
   render: function() {
-
+    $('.food-item').append(this.template(this.model));
   }
 })
 
