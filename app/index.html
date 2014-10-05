@@ -23,26 +23,23 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+    <div class="container">
+      <div class="food-container">
+        <script type="text/template" id="food-template">
 
-        <li>Sass</li>
+        <div class="food-item">
+          <h1>Food Title</h1>
+          <img src="http://placekitten.com/g/150/150">
+          <p>Description of the food item with a lot of words typically. Maybe a few more here with some more to finish it off.</p>
+          <button>Add To Order</button>
+          <span>Price</span>
+        </div>
+
+        </script>
 
 
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+      </div>
+      <div class="categories"></div>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -55,6 +52,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/menu.js"></script>
         <!-- endbuild -->
 </body>
 </html>
