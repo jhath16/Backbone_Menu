@@ -119,4 +119,5 @@ var menu = [{
   description:null,
   price:6,
   img_url:'http://chezpim.typepad.com/photos/uncategorized/2008/12/01/friedbanana.jpg',
-}]
+}];
+var menuCollection = new Menu(menu);

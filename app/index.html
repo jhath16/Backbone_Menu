@@ -22,24 +22,49 @@
     <!-- endbuild -->
   </head>
   <body>
+    <div class='page-container'>
+      <div class="inner-container">
+        <header>
+          <h1>Majestic</h1>
+          <img src="images/logo.png">
+          <h1>Thai</h1>
+        </header>
+        <div class="food-container">
 
-    <div class="container">
-      <div class="food-container">
-        <script type="text/template" id="food-template">
+          <script type="text/template" id="food-template">
 
-        <div class="food-item">
-          <h1>Food Title</h1>
-          <img src="http://placekitten.com/g/150/150">
-          <p>Description of the food item with a lot of words typically. Maybe a few more here with some more to finish it off.</p>
-          <button>Add To Order</button>
-          <span>Price</span>
+          <div class="food-item">
+            <h1><%= title %></h1>
+            <img src=<%= img_url %>>
+            <p><%= description %></p>
+            <button>Add To Order</button>
+            <span>$<%=price%></span>
+          </div>
+
+          </script>
+
+          <script type="text/template" id="order-template">
+            <span><%= title %></span><span class='price'><%= price %></span><button class="remove">Remove</button>
+          </script>
+
+          <script type="text/template" id="order-total">
+            <% if(total > 0) { %>
+            <span>$<%= total %></span><button>Check Out</button>
+            <% } %>
+          </script>
+
+
         </div>
-
-        </script>
-
-
+        <div class="categories"></div>
+        <div class="order-summary">
+          <div class="order-items"></div>
+          <div class="order-total"><span>Total</span></div>
+        </div>
+        <footer>
+          <span>Copyright 2014 Majestic Thai ®</span>
+          <span class='email'>Contact us: <a href="mailto:">Here</a></span>
+        </footer>
       </div>
-      <div class="categories"></div>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -47,12 +72,15 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/backfire/backbone-firebase.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <script src="scripts/menu.js"></script>
+        <script src="scripts/categories.js"></script>
         <!-- endbuild -->
 </body>
 </html>

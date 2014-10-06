@@ -5,45 +5,127 @@
 // Custom Styles
 body {
   font-size:100%;
+  color:#333;
 }
 
-.container {
+.page-container {
+  background:linear-gradient(#370c0b,#661514 600px,#661514);
+  @include clearfix;
+  padding:50px 10px;
+}
+
+.inner-container {
+  position:relative;
   padding:50px;
   width:90%;
   margin:0 auto;
   border:1px solid black;
+  border-radius:3px;
   @include clearfix;
+  background-color:#e3daa1;
+}
+
+header {
+  text-align:center;
+  border:1px solid black;
+  margin-bottom:20px;
+  border-radius:4px;
+  background:linear-gradient(#ed9a1e,rgba(255,255,255,.2));
+  background-size:cover;
+  box-shadow: 0 1px 6px grey;
+
+  img {
+    height:30%;
+    width:30%;
+  }
 }
 
 .food-container {
   @include span-columns(6);
-  @include shift(1);
-  border:1px solid red;
+  box-shadow:0 0 5px black;
 
   h1 {
     display:inline-block;
     margin:7px;
+    font-size:1.5em;
   }
 
   img {
     float:right;
     margin:5px;
+    width:100px;
+    height:80px;
+    border:1px solid #333333;
+    border-radius:3px;
+    box-shadow:0 0 3px #333333;
   }
 
   span {
     float:right;
+    color:#ed9a1e;
+    text-shadow:0 1px 2px black;
+    font-weight:bold;
+    font-size:1.1em;
   }
 }
 
 .categories {
-  @include span-columns (3);
-  @include shift(1);
-  border:1px solid green;
+  @include span-columns (4);
+  @include shift(1.7);
+  border:1px solid black;
+  border-radius:3px;
   text-align:center;
   padding:10px;
+  background:#ed9a1e;
+  font-weight:bold;
+  box-shadow:0 1px 5px grey;
+  margin-bottom:50px;
+  font-size:1.5em;
+
+  .category-title {
+    cursor:pointer;
+    padding:10px;
+
+    &:hover {
+      background-color:grey;
+    }
+  }
 }
 
 .food-item {
   padding:10px;
   border-bottom:1px solid grey;
+  background-color:#979713;
+}
+
+.order-summary {
+  @include span-columns(5);
+  @include shift(.5);
+  border:2px solid black;
+  min-height:100px;
+  border-radius:3px;
+  padding:7px;
+
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:90%;
+
+  .email {
+    float:right;
+
+  }
+}
+
+
+a {
+  color:#333;
+  text-decoration:none;
+  transition: all .3s ease;
+
+  &:hover {
+    color:white;
+  }
 }
