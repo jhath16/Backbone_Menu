@@ -50,7 +50,7 @@ var OrderTotalView = Backbone.View.extend({
     kitchenOrder.sync();
     orders.reset();
     orders.updateSummary();
-    alert('Thank you for choosing Majestic Thai. Your order has been submitted.');
+    alert('Your order has been submitted.');
   },
 
   total: function() {
@@ -94,7 +94,7 @@ var CategoryCollection = Backbone.Collection.extend({
 
 var CategoryView = Backbone.View.extend({
   className:'category-title',
-  
+
   render: function(){
     this.$el.html(this.model.get('name'));
     $('.categories').append(this.el);

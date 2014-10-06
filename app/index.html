@@ -25,9 +25,9 @@
     <div class='page-container'>
       <div class="inner-container">
         <header>
-          <h1>Majestic</h1>
-          <img src="images/logo.png">
-          <h1>Thai</h1>
+          <div>
+          </div>
+          <h1>Majestic Thai</h1>
         </header>
         <div class="food-container">
 
@@ -44,12 +44,15 @@
           </script>
 
           <script type="text/template" id="order-template">
-            <span><%= title %></span><span class='price'><%= price %></span><button class="remove">Remove</button>
+            <span class='title'><%= title %></span>
+            <span class='price'>$<%= price %></span>
+            <button class="remove">Remove</button>
           </script>
 
           <script type="text/template" id="order-total">
             <% if(total > 0) { %>
-            <span>$<%= total %></span><button>Check Out</button>
+            <span>Total Price: $<%= total %></span>
+            <button>Check Out</button>
             <% } %>
           </script>
 
@@ -57,12 +60,12 @@
         </div>
         <div class="categories"></div>
         <div class="order-summary">
+          <h2>Order Summary</h2>
           <div class="order-items"></div>
-          <div class="order-total"><span>Total</span></div>
+          <div class="order-total"></div>
         </div>
         <footer>
           <span>Copyright 2014 Majestic Thai ®</span>
-          <span class='email'>Contact us: <a href="mailto:">Here</a></span>
         </footer>
       </div>
     </div>

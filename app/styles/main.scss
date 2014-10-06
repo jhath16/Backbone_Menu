@@ -23,6 +23,7 @@ body {
   border-radius:3px;
   @include clearfix;
   background-color:#e3daa1;
+  min-height:1000px;
 }
 
 header {
@@ -30,14 +31,31 @@ header {
   border:1px solid black;
   margin-bottom:20px;
   border-radius:4px;
-  background:linear-gradient(#ed9a1e,rgba(255,255,255,.2));
+  background:linear-gradient(white, #849aa7);
   background-size:cover;
   box-shadow: 0 1px 6px grey;
+  padding:8px 30px;
 
-  img {
-    height:30%;
-    width:30%;
+  div {
+    background:url('../images/logo.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    height:200px;
   }
+
+  h1 {
+    font-size:3em;
+    display:inline-block;
+    margin:0;
+    background:rgba(151,151,19,.8);
+    box-shadow:0 2px 5px black;
+    color:#ed9a1e;
+    text-shadow:0 1px 5px black;
+    border-radius:4px;
+    padding:6px 10px;
+  }
+
 }
 
 .food-container {
@@ -103,29 +121,61 @@ header {
   @include shift(.5);
   border:2px solid black;
   min-height:100px;
-  border-radius:3px;
+  border-radius:6px;
   padding:7px;
+  background:#849aa7;
 
+  div {
+    margin:14px 0;
+  }
+
+  button {
+    float:right;
+  }
+
+  h2 {
+    margin:0;
+    font-size:1.2em;
+    border-bottom:1px solid #333;
+  }
+
+}
+
+.order-items {
+
+  span {
+    font-size:1.05em;
+  }
+
+  .price {
+    position:relative;
+    left:20px;
+  }
+
+  button {
+    float:right;
+    background-color:red;
+  }
+}
+
+.order-total {
+  padding-top:20px;
+  border-top:1px solid #333;
+  font-size:1.2em;
+
+  span {
+    font-weight:bold
+  }
+
+  button {
+    background-color:limegreen;
+  }
 }
 
 footer {
+  text-align:left;
   position:absolute;
   bottom:0;
   width:90%;
-
-  .email {
-    float:right;
-
-  }
-}
-
-
-a {
-  color:#333;
-  text-decoration:none;
-  transition: all .3s ease;
-
-  &:hover {
-    color:white;
-  }
+  padding:10px 0;
 }
