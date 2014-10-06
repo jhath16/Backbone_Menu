@@ -63,10 +63,6 @@ var OrderTotalView = Backbone.View.extend({
 });
 
 var OrderSummaryView = Backbone.View.extend({
-  initialize: function() {
-    console.log(this.model);
-  },
-
   template:_.template($('#order-template').text()),
 
   render:function() {
@@ -116,10 +112,6 @@ var CategoryView = Backbone.View.extend({
 })
 
 var FoodItemView = Backbone.View.extend({
-  initialize: function () {
-    console.log(this);
-  },
-
   template: _.template($('#food-template').text()),
 
   render: function() {
