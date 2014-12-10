@@ -37,7 +37,7 @@
             <h1><%= title %></h1>
             <img src=<%= img_url %>>
             <p><%= description %></p>
-            <button>Add To Order</button>
+            <div class='button add-button'>Add To Order</div>
             <span>$<%=price%></span>
           </div>
 
@@ -46,13 +46,13 @@
           <script type="text/template" id="order-template">
             <span class='title'><%= title %></span>
             <span class='price'>$<%= price %></span>
-            <button class="remove">Remove</button>
+            <div class="button remove-button remove">Remove</div>
           </script>
 
           <script type="text/template" id="order-total">
             <% if(total > 0) { %>
             <span>Total Price: $<%= total %></span>
-            <button>Check Out</button>
+            <div class='submit-button button'>Check Out</div>
             <% } %>
           </script>
 

@@ -4,7 +4,6 @@ var FoodItem = Backbone.Model.extend({})
 
 var Menu = Backbone.Collection.extend({
   initialize: function () {
-    console.log("Collection created");
   },
   model:FoodItem
 });
@@ -17,7 +16,6 @@ var KitchenOrder = Backbone.Firebase.Collection.extend({
 
 var Orders = Backbone.Collection.extend({
   initialize: function () {
-    console.log("Collection created");
     this.listenTo(this, 'add remove', this.updateSummary);
   },
 
@@ -41,7 +39,7 @@ var OrderTotalView = Backbone.View.extend({
   },
 
   events: {
-    'click button': 'checkOut'
+    'click .submit-button': 'checkOut'
   },
 
   checkOut: function () {
@@ -63,6 +61,7 @@ var OrderTotalView = Backbone.View.extend({
 });
 
 var OrderSummaryView = Backbone.View.extend({
+  className:'item',
   template:_.template($('#order-template').text()),
 
   render:function() {
@@ -121,7 +120,7 @@ var FoodItemView = Backbone.View.extend({
   },
 
   events: {
-    'click button' : 'addToOrder'
+    'click .button' : 'addToOrder'
   },
 
   addToOrder: function() {
