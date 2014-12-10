@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Backbone_Menu</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <div class='page-container'>
+      <div class="inner-container">
+        <header>
+          <div>
+          </div>
+          <h1>Majestic Thai</h1>
+        </header>
+        <div class="food-container">
+
+          <script type="text/template" id="food-template">
+
+          <div class="food-item">
+            <h1><%= title %></h1>
+            <img src=<%= img_url %>>
+            <p><%= description %></p>
+            <div class='button add-button'>Add To Order</div>
+            <span>$<%=price%></span>
+          </div>
+
+          </script>
+
+          <script type="text/template" id="order-template">
+            <span class='title'><%= title %></span>
+            <span class='price'>$<%= price %></span>
+            <div class="button remove-button remove">Remove</div>
+          </script>
+
+          <script type="text/template" id="order-total">
+            <% if(total > 0) { %>
+            <span>Total Price: $<%= total %></span>
+            <div class='submit-button button'>Check Out</div>
+            <% } %>
+          </script>
+
+
+        </div>
+        <div class="categories"></div>
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="order-items"></div>
+          <div class="order-total"></div>
+        </div>
+        <footer>
+          <span>Copyright 2014 Majestic Thai ®</span>
+        </footer>
+      </div>
+    </div>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
