@@ -174,7 +174,7 @@ var menu = [{
   title:'Tom Kha',
   description:'Lemon grass, onion, cabbage, lime leaves, cilantro and mushroom in coconut milk soup topped with chili oil.',
   price:8,
-  img_url:'https://d1ouk4tp1vcuss.cloudfront.net/remote/s3.amazonaws.com/ODNUploads/517b58a9e2494re_34._T_O_M_K_H_A_K_A_I_PA181940.jpg?width=75&mode=crop&v=1',
+  img_url:'http://www.bonappetit.com/wp-content/uploads/2013/08/tom-kha-gai-chicken-coconut-soup.jpg',
 }, {
   category:'soup',
   title:'Tom Yum',
