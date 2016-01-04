@@ -144,7 +144,7 @@ var menu = [{
   title:'House Salad',
   description:'Organic Spring mix, and mixed green lettuce, cucumber, carrot, and crispy wonton.',
   price:6,
-  img_url:'http://www.sushirockboca.com/wp-content/uploads/2011/07/Sushi-Rock-11-212x213.jpg',
+  img_url:'https://www.applebees.com/~/media/ABs0625/AM_Images/Menu%20C/Sides/Side_House_Salad.jpg',
 }, {
   category:'salads',
   title:'Aloy Salad',
